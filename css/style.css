@@ -1,0 +1,296 @@
+/*=========variable======*/
+:root{
+    --bg--light: #242424;
+    --primary:#000000;
+    --secondary: #d30101;
+    --back:#191919;
+    --font-color: #6c6b6d;
+    --black: #000;
+    --white: #fff;
+}
+/*========= common css======*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins';
+    background-color: var(--primary);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+::selection{
+    color: var(--white);
+    background-color: var(--black);
+}
+.head{
+    border-left: 3px solid var(--secondary);
+}
+/* ==================header==================== */
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    opacity: 0.5;
+    left: 0;
+    top:0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: .1s;
+}
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #ce0e2d;
+    border-radius: 50%;
+    left: 0;
+    top:0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: .15s;
+}
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 15px 40px;
+    display: inline-block;
+}
+header .navbar{
+    display: flex;
+    justify-content: space-between;
+}
+header .navbar .navbar-toggler{
+    background-color: var(--font-color);
+}
+header .navbar .navbar-brand img{
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+header .navbar .navbar-nav{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(50px);
+    list-style-type: none;
+    display: flex;
+}
+header .navbar-nav .nav-item .nav-link{
+    font-size: 20px;
+    color: var(--white);
+    padding: 20px;
+    list-style-type: none;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+header .navbar-nav .nav-item .nav-link:hover{
+    color: var(--secondary);
+}
+header .navbar-nav .nav-item .dropdown-menu{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(50px);
+}
+header .navbar-nav .nav-item .dropdown-menu .dropdown-item{
+    color: var(--border);
+    transition: all 0.5s;
+}
+header .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+/* ==========================banner============================ */
+.banner img{
+    height: 100%;
+    margin-top: 150px;
+}
+
+/* ================================explore=========================== */
+.explore{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 100px;
+    background-color: var(--bg--light);
+}
+.explore .head h4{
+    color: var(--white);
+    padding-left: 20px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.explore .cont h2{
+    color: var(--font-color);
+    padding-bottom: 20px;
+}
+.explore .cont p{
+    color: var(--font-color);
+    font-size: 20px;
+}
+
+ .two .button-50 {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 20px 50px 50px 0;
+  padding: 12px 40px;
+  text-align: center;
+  transition: all 1s;
+}
+ .two .button-50:hover{
+    box-shadow: var(--secondary) 4px 4px 0 0,var(--secondary) 4px 4px 0 1px;
+    color: var(--secondary);
+}
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+/* ====================key================ */
+.key{
+    margin: 100px 0px;
+}
+.key .carousel .carousel-inner .carousel-caption h5 span{
+    font-size: 36px;
+    color: var(--secondary);
+    padding: 10px;
+}
+.key .carousel .carousel-inner .carousel-caption h5{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 28px;
+}
+.key .carousel .carousel-inner .carousel-caption p{
+    color: var(--font-color);
+    font-size: 20px;
+}
+.key .carousel .carousel-control-prev .carousel-control-prev-icon{
+    color: var(--secondary);
+    padding: 25px 20px;
+    background-color: var(--font-color);
+}
+.key .carousel .carousel-control-next .carousel-control-next-icon{
+    color: var(--secondary);
+    padding: 25px 20px;
+    background-color: var(--font-color);
+}
+/* ===========================variants===================== */
+.variants{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 100px 0px;
+    background-color: var(--bg--light);
+}
+.variants .head h4{
+    color: var(--white);
+    padding-left: 20px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.variants .title span{
+    color: var(--font-color); 
+    border-bottom: 1px solid var(--secondary);
+    font-size: 24px;
+}
+
+.variants .rwd{
+    margin-bottom: 20px;
+}
+.variants .rwd h5{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 24px;
+}
+.variants .rwd span{
+    border-bottom: 1px solid var(--secondary);
+    color: var(--font-color);
+}
+.variants .transmission span{
+    color: var(--font-color);
+}
+.variants .transmission p{
+    color: var(--white);
+    font-weight: 400;
+    font-size: 18px;
+}
+.variants .max span{
+    color: var(--font-color);
+}
+.variants .max p{
+    color: var(--white);
+    font-weight: 400;
+    font-size: 18px;
+}
+.variants .seat span{
+    color: var(--font-color);
+}
+.variants .seat p{
+    color: var(--white);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.variants .cont{
+    margin-top: 20px;
+}
+.variants .cont span{
+    color: var(--font-color);
+    margin: 20px 0px;
+}
+.variants .cont p{
+    color: var(--white);
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.accordian {
+	width: 100%; 
+    height: 300px;
+	overflow: hidden;
+    margin-top: 30px;
+}
+.accordian p{
+    color: var(--white);
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.accordian ul {
+	width: 2000px;
+}
+.accordian ul li {
+	position: relative;
+	display: block;
+	width: 260px;
+	float: left;
+	border-left: 1px solid #888;
+	transition: all 0.5s;
+}
+.accordian ul:hover li {width: 40px;}
+.accordian ul li:hover {width: 600px;}
+.accordian ul li img {
+	display: block;
+}
+.image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; 
+    bottom: 0;	
+    width: 800px;	
+}
+.image_title a {
+	display: block;
+	color:  var(--white);
+	text-decoration: none;
+	padding: 20px;
+}
