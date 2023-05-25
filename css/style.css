@@ -29,6 +29,7 @@ img{
 }
 .head{
     border-left: 3px solid var(--secondary);
+    margin: 0px 0px 50px 0px;
 }
 /* ==================header==================== */
 .cursor{
@@ -42,7 +43,7 @@ img{
     top:0;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 999;
     transition: .1s;
 }
 .cursor2{
@@ -51,12 +52,13 @@ img{
     height: 8px;
     background-color: #ce0e2d;
     border-radius: 50%;
+    opacity: 0.8;
     left: 0;
     top:0;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    transition: .15s;
+    z-index: 999;
+    transition: .25s;
 }
 header{
     width: 100%;
@@ -80,6 +82,7 @@ header .navbar .navbar-brand img{
 header .navbar .navbar-nav{
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(50px);
+    border-radius: 20px;
     list-style-type: none;
     display: flex;
 }
@@ -154,6 +157,7 @@ header .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
 @media (min-width: 768px) {
   .button-50 {
     padding: 12px 50px;
+    flex-wrap: wrap;
   }
 }
 /* ====================key================ */
@@ -252,23 +256,34 @@ header .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
     font-weight: 300;
     font-size: 12px;
 }
-
-.accordian {
+.head h4{
+    color: var(--white);
+    padding-left: 20px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.features .head h4{
+    color: var(--white);
+    padding-left: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.features .accordian {
 	width: 100%; 
     height: 300px;
 	overflow: hidden;
     margin-top: 30px;
 }
-.accordian p{
+.features .accordian p{
     color: var(--white);
     font-weight: 300;
     font-size: 16px;
 }
 
-.accordian ul {
+.features .accordian ul {
 	width: 2000px;
 }
-.accordian ul li {
+.features .accordian ul li {
 	position: relative;
 	display: block;
 	width: 260px;
@@ -276,9 +291,9 @@ header .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
 	border-left: 1px solid #888;
 	transition: all 0.5s;
 }
-.accordian ul:hover li {width: 40px;}
-.accordian ul li:hover {width: 600px;}
-.accordian ul li img {
+.features .accordian ul:hover li {width: 40px;}
+.features .accordian ul li:hover {width: 600px;}
+.features .accordian ul li img {
 	display: block;
 }
 .image_title {
@@ -294,3 +309,252 @@ header .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
 	text-decoration: none;
 	padding: 20px;
 }
+.accessories{
+    margin: 100px 0px 100px 0px;
+}
+.accessories .head h4{
+    color: var(--white);
+    padding-left: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.accessories .swiper {
+    width: 100%;
+    height: 100%;
+    backface-visibility: visible !important;
+  }
+
+  .accessories  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .accessories  .swiper-slide .card{
+    background-color: var(--primary);
+    border: none;
+  }
+  .accessories  .swiper-slide .card h6{
+    margin: 20px 0px;
+    color: var(--white);
+    text-align: left;
+  }
+  .accessories  .swiper-button-next,.swiper-button-prev {
+    color: var(--secondary);
+  }
+
+  @media (max-width: 767px) {
+    .accessories  .swiper-button-next {
+      right: 20px;
+    }
+
+    .accessories  .swiper-button-prev {
+      left: 20px;
+        }
+  }
+
+.news{
+    background-color: var(--black);
+}
+.news .head h4{
+    color: var(--white);
+    padding-left: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.news .news-info{
+    overflow: hidden;
+}
+.news .news-info .news-img{
+    transition: all 0.5s;
+}
+.news .news-con h5{
+    padding-top: 20px;
+    color: var(--white);
+    transition: all 0.5s;
+}
+.news .news-info:hover .news-img{
+    transform: scale(1.1);
+}
+.news .news-info:hover .news-con h5{
+    color: var(--secondary);
+}
+
+.tribe{
+    background-color: var(--bg--light);
+    margin: 50px 0px;
+    padding: 50px 0px;
+
+}
+.tribe .head h4{
+    color: var(--white);
+    padding-left: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.tribe .box{
+    background-color: var(--black);
+    position: relative;
+    height: 260px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px; 
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s;
+
+}
+.tribe .box .profile{
+    padding: 20px 0px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    z-index: 99;
+}
+.tribe .box .profile .pro-pic img{
+    border-radius: 50%;
+}
+.tribe .box .profile .pro-pic .name{
+    color: var(--white);
+    padding-left: 10px;
+    font-size: 20px;
+}
+.tribe .box .profile .pro-pic .id{
+    color: var(--white);
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+.tribe .box .profile .twitter i{
+    color: var(--white);
+    font-size: 20px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 20px;
+}
+.tribe .box .pro-con p{
+    color: var(--white);
+    font-size: 16px;
+    padding: 0% 10%;
+    margin-bottom: 20px;
+}
+.tribe .box .pro-foot{
+    display: flex;
+    justify-content: space-around;
+}
+.tribe .box .pro-foot .twitter1 i{
+    color: var(--white);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.tribe .box .pro-foot .twitter1 span{
+    color: var(--white);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.tribe .box .pro-foot .like i{
+    color: var(--white);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.tribe .box .pro-foot .like span{
+    color: var(--white);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.tribe .box::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    background-color: var(--font-color);
+    transition: all 0.5s;
+
+}
+.tribe .box:hover::after{
+    height: 100%;
+}
+.tribe .box .info{
+    visibility: hidden;
+    position: absolute;
+    transition: all 0.5s;
+    color: var(--white);
+    opacity: 0;
+    z-index:99;
+}
+.tribe .box .info p{
+    margin: 0 10%;
+    color: var(--white);
+    transition: all 0.5s;
+    
+}
+.tribe .box:hover .info{
+    opacity: 1;
+    visibility: visible;
+}
+
+footer{
+    padding: 100px 0px;
+}
+footer .auto h6{
+    color: var(--white);
+    font-size: 20px;
+}
+footer .auto span{
+    display: block;
+    padding: 10px;
+    color: var(--font-color);
+    font-weight: 700;
+    transition: all 0.5s;
+}
+footer .auto span:hover{
+    color: var(--secondary);
+}
+
+.foot-last{
+    background-color: var(--bg--light);
+    height: 90px;
+    width: 100%;
+}
+.foot-last .copy{
+    color: var(--white);
+    padding: 28px 0px;
+}
+.foot-last .contry{
+    padding: 25px 20px;
+}
+.foot-last .contry .dropdown .btn{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--white);
+    margin-right: 20px;
+}
+.foot-last .contry .dropdown .dropdown-menu{
+    background-color: var(--black);
+}
+.foot-last .contry .dropdown .dropdown-item{
+    background-color: var(--black);
+    color: var(--white);
+    transition: all 0.5s;
+}
+.foot-last .contry .dropdown .dropdown-item:hover{
+    color: var(--secondary);
+}
+.foot-last .contry span{
+    color: var(--white);
+    padding-left: 10px;
+}
+@media (max-width: 467px) {
+    .foot-last .contry{
+        visibility: hidden;
+    }
+    .foot-last{
+        display: none   ;
+    }
+}
+
